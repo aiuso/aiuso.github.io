@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Iuso Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/projects.css" />
+		<link rel="stylesheet" href="assets/css/gist.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Anthony Iuso</h1>
+							<p>Title</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-th-list">About</span></a></li>
+								<li><a href="#background" id="portfolio-link"><span class="icon solid fa-book">Background</span></a></li>
+								<li><a href="#code" id="about-link"><span class="icon solid fa-code">Code</span></a></li>
+								<li><a href="#demo" id="about-link"><span class="icon solid fa-play">Demo</span></a></li>
+								<li ><hr id="nav-hr"></li>
+								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+								<li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">CV</span></a></li>
+								<li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/anthony.iuso.5" target="_blank" rel="noopener noreferrer" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.github.com/aiuso" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aiuso" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Punnett Square Question Generator.</h2>
+							</header>
+							<p><span class="bullet">Objective: </span>Randomly generate questions for 
+								students to practice predicting outcomes for simple trait Mendalian genetics.
+							</p><br />
+							<p>Manually creating and grading questions for student practice requires significant time. 
+								Moreover, at any given time, students are at different 
+								levels of understanding and individually require different amounts of practice. The question 
+								generator allows student to practice - as much as needed - until they can 
+								consistently solve a series of questions.
+							</p>
+						</div>
+					</section>
+
+				<!-- Background -->
+					<section id="background" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Background</h2>
+							</header>
+
+
+							<br />
+							<h3>What are Punnett Squares?</h3><br />
+							<p>In genetics, a Punnett Square is an organizational approach to predicting 
+								trait inheritance from parent to offspring. For most of the genes in our genome, 
+								we have two copies for any one gene; each of these copies is called an allele. 
+								You can think of alleles as being variants of a gene that can confer a particular trait. 
+							</p>
+							<p>Our two alleles can either be the same variant, or they can be different variants, 
+								but it’s important understand that these variants are for the same trait. Alleles can 
+								either be dominant or recessive, which determines which expression of the trait will 
+								be observed. For simple traits – or traits that are determined by a single gene – we 
+								can use Punnett Squares to determine the probability of an offspring inheriting a particular trait.
+							</p>
+							<p>During reproduction, just one of allele from each parent is passed down to an 
+								offspring. The Punnett Square demonstrates four possible outcomes of allele inheritance. 
+								Then, based on the possible allele compositions, we can infer probabilities for genetic 
+								makeup and trait expression. 
+							</p>
+
+						</div>
+					</section>
+
+				<!-- Code -->
+				<section id="code" class="three">
+					<div class="container">
+
+						<header>
+							<h2>Code
+								<img class="code-icon" src="img/js.png" />
+							</h2>
+						</header>
+
+						<h3>Requirements</h3>
+						<ul>
+								<ul class="requirements">
+									<li> Genetate random conditions to establish a question including: <br />
+										&emsp;&emsp; parent zygosity, child zygosity and trait dominance
+									<li> Generate a completed Punnett Sqaure for reference</li>
+									<li> Accept user input and evaluate response for correctness</li>
+							</ul>
+						</ul> 
+						<script src="https://gist.github.com/aiuso/3897397a528f2ce498cfe8130963c561.js"></script>
+
+					</div>
+				</section>
+
+				<!-- Demo -->
+                    <section id="demo" class="four">
+                        <div class="container">
+
+                            <header>
+                                <h2>Demonstration</h2>
+                            </header>
+
+                            <div id=question>
+                                <div class="grid-container">
+                
+                                    <div class="grid-item-col-1" id="genotype">
+                                        <button type="button" id="newQuestion" onclick=generatePunnettQuestion()> Click for Question </button>
+										<p></p>
+                                        <p id='scenario'></p>
+                                        <p id='genotypeQuestion'></p>
+                                        <div id=genotypeButtons style="display:none">
+                                            <button type ="button" class="choiceG" id="0percent" value=0 
+                                                onclick=checkGenotypeAnswer(0)>0%</button>  
+                                            <button type ="button" class="choiceG" id="25percent" value=25 
+                                                onclick=checkGenotypeAnswer(25)>25%</button> 
+                                            <button type ="button" class="choiceG" id="50percent" value=50 
+                                                onclick=checkGenotypeAnswer(50)>50%</button>  
+                                            <button type ="button" class="choiceG" id="75percent" value=75 
+                                                onclick=checkGenotypeAnswer(75)>75%</button>  
+                                            <button type ="button" class="choiceG" id="100percent" value=100 
+                                                onclick=checkGenotypeAnswer(100)>100%</button>  
+                                        </div>
+										<br>
+                                        <p id="returnGenotypeAnswer"></p>
+
+										<div class="grid-item-col-1">
+											<p id='questionPhenotype'></p>
+												<div id='phenotype' style="visibility:hidden;">
+												<p id='phenotypeQuestion'>What is the chance of observing the expression of this gene?</p>
+												<div id='phentypeAnswerChoices'>
+													<button type ="button" class="choiceP" id="0percent" value=0 
+														onclick=checkPhenotypeAnswer(0)>0%</button>  
+													<button type ="button" class="choiceP" id="25percent" value=25 
+														onclick=checkPhenotypeAnswer(25)>25%</button> 
+													<button type ="button" class="choiceP" id="50percent" value=50 
+														onclick=checkPhenotypeAnswer(50)>50%</button>  
+													<button type ="button" class="choiceP" id="75percent" value=75 
+														onclick=checkPhenotypeAnswer(75)>75%</button>  
+													<button type ="button" class="choiceP" id="100percent" value=100 
+														onclick=checkPhenotypeAnswer(100)>100%</button>
+												</div>
+												<br>
+												<p id=returnPhenotypeAnswer></p>
+											</div>
+										</div>
+                                    </div>
+
+                                    <div class="grid-item-col-2">
+                                        <button type ="button" id="showPunnetSquare" onclick=printPunnettSquare() style="visibility:hidden;">Show Punnett Square</button>
+                                        <p></p>
+                                        <p id="punnettSquareAnswer"></p>
+                                    </div>
+									
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+			</div>
+
+			
+
+            
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href=""></a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/punnett-square.js"></script>
+
+	</body>
+</html>

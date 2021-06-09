@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Iuso Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/projects.css" />
+        <link rel="stylesheet" href="assets/css/gist.css" />
+	</head>
+	<body class="is-preload" onload="loadRepo()">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Anthony Iuso</h1>
+							<p>Title</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-th-list">About</span></a></li>
+								<li><a href="#background" id="portfolio-link"><span class="icon solid fa-book">Background</span></a></li>
+								<li><a href="#code" id="about-link"><span class="icon solid fa-code">Code</span></a></li>
+								<li><a href="#demo" id="about-link"><span class="icon solid fa-play">Demo</span></a></li>
+								<li ><hr id="nav-hr"></li>
+								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+								<li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">CV</span></a></li>
+								<li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/anthony.iuso.5" target="_blank" rel="noopener noreferrer" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.github.com/aiuso" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aiuso" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Rare Bourbon Finder.</h2>
+								<p><span class="bullet">Objective: </span>Identify stock arrival of rare bourbons 
+                                    at local retail locations.
+								</p>
+
+							</header>
+						</div>
+					</section>
+
+				<!-- Background -->
+					<section id="background" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Background</h2>
+							</header>
+
+							<p>As any bourbon fan already knows: some of the best tasting bourbons are also the 
+                                hardest to come by. The objective of this bourbon finder is to identify the time and location
+                                when rare bourbons hit the shelves in the the great state of North Carolina. The Rare 
+                                Bourbon Finder is a Python script that navigates NC state liquor inventories, scrapes 
+                                inventory data, and send notifications when that sweet bottle of bourbon is in stock 
+                                <em>and</em> where to grab it.
+							</p>
+                            <p>This script was originally written with Blanton's in mind, but can be used for any bourbon
+                                distributed by North Carolina.
+							</p>
+
+						</div>
+					</section>
+
+				<!-- Demo -->
+                    <section id="code" class="three">
+                        <div class="container">
+
+                            <header>
+                                <h2>Code 
+									<img class="code-icon" src="img/python.png" /><br />
+								</h2>
+                            </header>
+
+							<h3>Requirements</h3>
+							<ul>
+									<ul class="requirements">
+										<li>Navigate NC state liquor inventories</li>
+										<li>Extract pertinant data from HTML</li>
+										<li>Send SMS message of inventory and location when available</li>
+								</ul>
+							</ul> 
+                            <div id='github'>
+
+								<h3>Navigation with Selenium
+									<img class="code-icon" src="img/selenium.png" />
+								</h3><br />
+								<script src="https://gist.github.com/aiuso/75bcf985825a0623d7b759ae65e7852a.js"></script><br /><br />
+
+								<h3>Notifications with Twilio</h3><br />
+								<script src="https://gist.github.com/aiuso/e898076f80d9ac18f179bff8db9aae76.js"></script><br />
+								<h3>Notifications with Twilio</h3>
+
+							</div>
+						</div>
+					</section>
+				</div>
+
+			</div>
+
+
+            
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href=""></a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/question_punnettSquare.js"></script>
+
+            <script src="assets/js/bourbon.js"></script>
+            <script src="assets/js/repo.min.js"></script>
+            <script src="assets/js/repo.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</body>
+</html>

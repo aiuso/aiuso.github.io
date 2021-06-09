@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Iuso Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/projects.css" />
+		<link rel="stylesheet" href="assets/css/gist.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Anthony Iuso</h1>
+							<p>Title</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-th-list">About</span></a></li>
+								<li><a href="#background" id="portfolio-link"><span class="icon solid fa-book">Background</span></a></li>
+								<li><a href="#code" id="about-link"><span class="icon solid fa-code">Code</span></a></li>
+								<li><a href="#demo" id="about-link"><span class="icon solid fa-play">Demo</span></a></li>
+								<li ><hr id="nav-hr"></li>
+								<li><a href="index.html#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+								<li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">CV</span></a></li>
+								<li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/anthony.iuso.5" target="_blank" rel="noopener noreferrer" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.github.com/aiuso" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aiuso" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Protein Synthesis Question Generator.</h2>
+								<p><span class="bullet">Objective: </span>Randomly generate questions for 
+									students to practice transcribing DNA to RNA and translating RNA into peptides.
+								</p>
+
+
+							</header>
+						</div>
+					</section>
+
+				<!-- Background -->
+					<section id="background" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Background</h2>
+							</header>
+
+							<p>Protein synthesis is a cellular process of turning information stored in  genetic 
+								material (DNA) into a functional molecule that can carry out cellular functions. 
+								However, proteins cannot be made directly from DNA, the DNA must first be copied 
+								into a ‘protein readable’ type of genetic material called RNA.
+							</p>
+
+							<p>The process of transcribing DNA to RNA and translating RNA into protein, is a 
+								fundamental process in biology known as protein synthesis. This question generator 
+								will randomly generate a sequence of DNA that students will have to transcribe into RNA. 
+								Then using a codon chart, they will have to determined the sequence of amino acids that 
+								would be arranged from that RNA.
+							</p>
+
+
+						</div>
+					</section>
+
+				<!-- Code -->
+				<section id="code" class="three">
+					<div class="container">
+
+						<header>
+							<h2>The Code 
+								<img class="code-icon" src="img/js.png" />
+							</h2>
+						</header>
+
+						<h3>Requirements</h3><br />
+						<ul class="requirements">
+							<li></li>
+						</ul>
+
+						<script src="https://gist.github.com/aiuso/92fd4f0bfbf2ccbcceaa9c0310e0ad9c.js"></script>
+
+					</div>
+				</section>
+
+				<!-- Demo -->
+                    <section id="demo" class="four">
+                        <div class="container">
+
+                            <header>
+                                <h2>Demonstration</h2>
+                            </header>
+
+							<!-- Protein Synthesis Questions -->
+							<div>
+								<div>
+									<div >
+										<button type="button" id="newQuestion"  onclick=generateTrascriptQuestion()>Click for Question</button>
+
+											<div>
+												<br />
+												<p id='prompt-rna-question'>
+												<p id='prompt-dna-template'></p><br>
+												<p id='post-rna-response'></p>
+												<p class ="answer" id='post-rna-transcript'></p>
+												<p id='post-highlight-rna-answer'></p>
+												<div id="demo-rna-answer"  style="display: none; font-size: 11pt;">
+													*For demo purposes: <a onclick=revealAnswer("rna")>Reveal RNA</a>
+													<div id="reveal-rna">
+													</div>
+												</div>
+											</div>
+
+										<div class="container-submit" id='container-submit-rna' style='display:none'>
+											<div class="group">
+												<input type="text" id="rna-textbox" required="required"/><span class="highlight"></span><span class="bar"></span>
+												<label for="rna-textbox">mRNA Sequence</label><br />
+												<button type ="button" class="submit" id="sd-submit" 
+												onclick=setUserInput(document.getElementById("rna-textbox").value)>Submit</button>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="column">
+										<br />
+										<p id='prompt-peptide-question'></p><br>
+										<p  id='post-peptide-answer'></p>
+										<div id="demo-peptide-answer"  style="display: none; font-size: 11pt;">
+											*For demo purposes: <a onclick=revealAnswer("peptide")>Reveal Pepetide</a>
+											<div id="reveal-peptide">
+											</div>
+											</div>
+
+										<div  id='container-submit-peptide' style='visibility:hidden;'>
+											<div class="group">
+												<textarea type="textarea" rows="5" id="peptide-textarea" required="required"></textarea><span class="highlight"></span><span class="bar"></span>
+												<label for="peptide-textarea">Amino Acid Sequence</label><br />
+												<button type ="button" class="submit" id="sd-submit" 
+												onclick=setUserInput(document.getElementById("peptide-textarea").value)>Submit</button>     
+											</div>
+										</div>
+										</div>
+										<div class="column">
+											<br />
+											<img id="aa-table" src="img/aa_table.png" style="visibility: hidden; height:400px; width: 400px;"/>
+										</div>
+								</div>
+							</div>
+                        </div>
+                    </section>
+			</div>
+
+				   
+			
+
+            
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href=""></a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/protein-synth.js"></script>
+
+	</body>
+</html>
